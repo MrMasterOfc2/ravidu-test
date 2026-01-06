@@ -1,64 +1,420 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
- 
-  <title>Sri lanka</title>
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lanka - The Green Heart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f9ee;
+            color: #333;
+            line-height: 1.6;
+            background-image: linear-gradient(to bottom, #f5f9ee, #e6f0d5);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(to right, #1e5631, #4c956c);
+            color: white;
+            padding: 30px 0;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 2.8rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            padding-bottom: 10px;
+        }
+        
+        .title i {
+            color: #d4f1d4;
+        }
+        
+        .marquee-container {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+        
+        marquee {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d4f1d4;
+            padding: 5px;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+        }
+        
+        .side-content {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #4c956c;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #1e5631;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #c9e4c5;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .highlight {
+            color: #1e5631;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        th {
+            background-color: #1e5631;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f0f7ec;
+        }
+        
+        ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+        
+        .form-section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1e5631;
+            font-weight: 600;
+        }
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="search"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #c9e4c5;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus {
+            border: 1px solid #4c956c;
+            outline: none;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        input[type="radio"] {
+            accent-color: #4c956c;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #1e5631;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background-color: #4c956c;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .whatsapp-link {
+            background-color: #25D366;
+        }
+        
+        .whatsapp-link:hover {
+            background-color: #1da851;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #666;
+            border-top: 1px solid #ddeed8;
+            font-size: 0.9rem;
+        }
+        
+        .sri-lanka-flag {
+            height: 20px;
+            width: 30px;
+            display: inline-block;
+            background: linear-gradient(to right, #ffbe29 33%, #fff 33% 66%, #ffbe29 66%);
+            margin-right: 8px;
+            vertical-align: middle;
+            border-radius: 2px;
+            position: relative;
+        }
+        
+        .sri-lanka-flag::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #8d2029;
+            width: 20%;
+            border-radius: 2px 0 0 2px;
+        }
+        
+        .sri-lanka-flag::after {
+            content: "🍃";
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            font-size: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .title {
+                font-size: 2.2rem;
+            }
+            
+            marquee {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>
-    <center><i>Green hart</i></center></h1>
-  <center><marquee><font face="Arial"colour="blue ">සොබ ගුනය රටෙ සැමට</font></marquee></center></h1>
-  
-  
-  <table border="1"
-    <tr>
-      <th>best</th>
-      <th>name</th>
-      <th>num</th>
-    </tr><tr>
-      
-    <td>sri lanka</td>
-    <td>saman</td>
-    <td>Rs100</td>
-    </tr>
-    <tr> <td>ostaliya</td>
-      <td>yjanith</td>
-      <td>Rs500</td>
-    </tr>
-  <p>
-  </p>sri lanka is best country of the world.it is verry beautiful country
-  </p>
-  <ol><ol type=a>
-    <li>name</li>
-    <li>dc</li>
-    <li>rdk</li>
-  </ol>
+    <header>
+        <div class="container">
+            <h1 class="title"><i>Sri Lanka - The Green Heart</i></h1>
+            <div class="marquee-container">
+                <marquee><font face="Arial" color="#d4f1d4">සොබ ගුනය රටෙ සැමට (Natural beauty for everyone in the country)</font></marquee>
+            </div>
+        </div>
+    </header>
     
-     <hr>
-    <form>
-      <input type="radio"Name="sex"value="male"  > male
-      <br><input type="radio"name="sex"value="female" >female  </form>
-    <form>
-      password<input type="password"value"pwd">
-    </form>
-    <form>
-      search bar<input type="search bar"value"pwd">
-    </form>
-    <form action=https://www.google.com method="get">
-      <input type="submit"value="submit"/>
-      
- </form>
-    <a href="URL">"http://www.whatsapp.com"</a>
-    
-      
-      
-      
-   
-
-
-    
-    
+    <div class="container">
+        <div class="content">
+            <div class="main-content">
+                <div class="card">
+                    <h2>About Sri Lanka</h2>
+                    <p>Sri Lanka is <span class="highlight">the best country in the world</span>. It is a very beautiful country known as the "Pearl of the Indian Ocean" with diverse landscapes ranging from pristine beaches to lush hill country and ancient cultural sites.</p>
+                    <p>Sri Lanka is famous for its rich biodiversity, UNESCO World Heritage sites, delicious cuisine, and warm hospitality. The country boasts eight UNESCO World Heritage sites, including the ancient cities of Anuradhapura and Polonnaruwa, the sacred city of Kandy, and the stunning Sigiriya Rock Fortress.</p>
+                </div>
+                
+                <div class="card">
+                    <h2>Visitor Information</h2>
+                    <table>
+                        <tr>
+                            <th>Best Places</th>
+                            <th>Name</th>
+                            <th>Entry Fee</th>
+                        </tr>
+                        <tr>
+                            <td>Sri Lanka</td>
+                            <td>Saman</td>
+                            <td>Rs 100</td>
+                        </tr>
+                        <tr>
+                            <td>Australia</td>
+                            <td>Yjanith</td>
+                            <td>Rs 500</td>
+                        </tr>
+                        <tr>
+                            <td>Sigiriya</td>
+                            <td>Ancient Rock</td>
+                            <td>Rs 2,500</td>
+                        </tr>
+                        <tr>
+                            <td>Ella</td>
+                            <td>Hill Country</td>
+                            <td>Free</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="form-section">
+                    <h2>Contact & Inquiry Form</h2>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="male" name="sex" value="male" checked>
+                                    <label for="male">Male</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="female" name="sex" value="female">
+                                    <label for="female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter your password">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="search">Search</label>
+                            <input type="search" id="search" placeholder="Search for information...">
+                        </div>
+                        
+                        <div class="btn-container">
+                            <button type="submit" class="btn">Submit Form</button>
+                            <a href="https://www.google.com" target="_blank" class="btn">Search on Google</a>
+                            <a href="https://www.whatsapp.com" target="_blank" class="btn whatsapp-link">Connect via WhatsApp</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="side-content">
+                <div class="card">
+                    <h2>Quick Links</h2>
+                    <ol type="a">
+                        <li>Sri Lanka Tourism</li>
+                        <li>Destination Guide</li>
+                        <li>Cultural Events</li>
+                        <li>Wildlife Safari</li>
+                        <li>Beach Resorts</li>
+                        <li>Travel Tips</li>
+                    </ol>
+                </div>
+                
+                <div class="card">
+                    <h2>Why Visit Sri Lanka?</h2>
+                    <p><span class="highlight">1. Rich Cultural Heritage</span> - Over 2,500 years of recorded history</p>
+                    <p><span class="highlight">2. Natural Beauty</span> - Beaches, mountains, and wildlife</p>
+                    <p><span class="highlight">3. Biodiversity</span> - Home to many endemic species</p>
+                    <p><span class="highlight">4. Friendly People</span> - Known for warm hospitality</p>
+                    <p><span class="highlight">5. Delicious Cuisine</span> - Unique flavors and spices</p>
+                </div>
+                
+                <div class="card">
+                    <h2>National Symbols</h2>
+                    <p><span class="sri-lanka-flag"></span> <strong>Flag:</strong> Lion, Bo leaves, and colored panels</p>
+                    <p>🌺 <strong>National Flower:</strong> Blue Water Lily</p>
+                    <p>🐘 <strong>National Animal:</strong> Sri Lankan Elephant</p>
+                    <p>🐦 <strong>National Bird:</strong> Sri Lankan Junglefowl</p>
+                    <p>🌳 <strong>National Tree:</strong> Na Tree (Ironwood)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2023 Sri Lanka - The Green Heart. All rights reserved. | සොබ ගුනය රටෙ සැමට</p>
+            <p>Designed with ❤️ for Sri Lanka tourism promotion</p>
+        </div>
+    </div>
 </body>
 </html>
